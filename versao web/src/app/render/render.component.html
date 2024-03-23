@@ -1,0 +1,22 @@
+
+<div style="display: flex; margin: auto;">
+    <div class="div-light">
+        <p-selectButton [options]="stateOptions" [(ngModel)]="value1" optionLabel="label" optionValue="value" (onChange)="toggleBackground()"></p-selectButton>
+    </div>
+
+    <div class="div-textures">
+        <span><b>Textures</b></span><br>
+        <input id="idWall" type="radio" [checked]="checkWall" (change)="changeStatus('idWall',$event)"> Wall Texture<br>
+        <input id="idWallMap" type="radio" [checked]="checkWallMap" (change)="changeStatus('idWallMap',$event)"> Wall Normal Map<br>
+        <input id="idNoTexture" type="radio" [checked]="nocheck" (change)="changeStatus('idNoTexture',$event)"> No Textures<br>
+    </div>
+
+    <div class="div-lighting">
+        <span><b>Lighting</b></span><br>
+        <input id="idPhong" type="radio" [checked]="checkPhong" (change)="changeStatusLighting('idPhong',$event)"> Phong<br>
+        <!-- <input id="idGouraud" type="radio" [checked]="noLight" (change)="changeStatusLighting('idGouraud',$event)"> No Lighting<br> -->
+    </div>
+
+</div>
+
+
